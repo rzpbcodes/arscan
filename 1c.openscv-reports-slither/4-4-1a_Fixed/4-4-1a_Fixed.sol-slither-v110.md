@@ -1,0 +1,48 @@
+**THIS CHECKLIST IS NOT COMPLETE**. Use `--show-ignored-findings` to show all the results.
+Summary
+ - [shadowing-local](#shadowing-local) (1 results) (Low)
+ - [solc-version](#solc-version) (2 results) (Informational)
+ - [constable-states](#constable-states) (1 results) (Optimization)
+## shadowing-local
+Impact: Low
+Confidence: High
+ - [ ] ID-0
+[FoodBudgetWallet.FoodBudgetWallet(address)._restaurant]() shadows:
+	- [FoodBudgetWallet._restaurant]() (state variable)
+
+## solc-version
+Impact: Informational
+Confidence: High
+ - [ ] ID-1
+Version constraint ^0.4.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- DirtyBytesArrayToStorage
+	- KeccakCaching
+	- EmptyByteArrayCopy
+	- DynamicArrayCleanup
+	- TupleAssignmentMultiStackSlotComponents
+	- MemoryArrayCreationOverflow
+	- privateCanBeOverridden
+	- IncorrectEventSignatureInLibraries_0.4.x
+	- ExpExponentCleanup
+	- NestedArrayFunctionCallDecoder
+	- ZeroFunctionSelector
+	- DelegateCallReturnValue
+	- ECRecoverMalformedInput
+	- SkipEmptyStringLiteral
+	- ConstantOptimizerSubtraction
+	- IdentityPrecompileReturnIgnored
+	- HighOrderByteCleanStorage
+	- OptimizerStaleKnowledgeAboutSHA3
+	- LibrariesNotCallableFromPayableFunctions.
+It is used by:
+	- [^0.4.0]()
+
+ - [ ] ID-2
+solc-0.4.0 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.
+
+## constable-states
+Impact: Optimization
+Confidence: High
+ - [ ] ID-3
+[FoodBudgetWallet._restaurant]() should be constant 
+
