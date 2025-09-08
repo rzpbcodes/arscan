@@ -9,7 +9,7 @@ rm -rf env
 python3 -m venv env
 source env/bin/activate
 pip install --upgrade setuptools wheel
-pip install .
+pip install -e .
 ```
 
 ### Install solc-select for selecting a Solidity compiler version
