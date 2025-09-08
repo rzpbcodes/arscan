@@ -1,3 +1,18 @@
+# ArScan
+
+**ArScan** is a static analysis tool for detecting arithmetic issues in Ethereum smart contracts. 
+## Features
+- Detects common arithmetic issues like:
+  - Integer overflow
+  - Integer underflow
+  - Divide by zero
+  - Precision Loss by Integer Division
+  - Signedness issues
+  - Truncation
+- Supports analyzing Solidity files (`.sol`).
+- Provides detailed output of potential issues, including impacted code locations and the severity of the issues.
+- Easily integrates with existing projects using a virtual environment for dependencies.
+
 ### Towards Secure Smart Contracts
 ---
 
